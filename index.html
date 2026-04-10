@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hotel Paraíso - Seu Refúgio Perfeito</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="nav">
+      <div class="logo">
+        <div class="logo-badge">H</div>
+        <span>Hotel Paraíso</span>
+      </div>
+      <div class="nav-links">
+        <a href="#hero">Início</a>
+        <a href="#galeria">Quartos & Fotos</a>
+        <a href="#checkin">Check-in</a>
+        <a href="#contato">Contato</a>
+        <a href="#checkin" class="nav-cta">Reservar agora</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero" aria-label="Apresentação do hotel">
+      <div class="hero-text">
+        <h1>Seu refúgio perfeito à beira-mar.</h1>
+        <p>
+          Conforto, elegância e atendimento personalizado para tornar sua estadia inesquecível.
+          Localizado a poucos passos da praia, com café da manhã completo e wi‑fi de alta velocidade.
+        </p>
+
+        <div class="hero-badges">
+          <span class="badge">★ 4.9 média de avaliações</span>
+          <span class="badge">Check-in 24h</span>
+          <span class="badge">Wi‑Fi e café da manhã inclusos</span>
+        </div>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-primary" onclick="scrollToSection('checkin')">
+            Fazer check-in online
+          </button>
+          <button class="btn btn-outline" onclick="scrollToSection('galeria')">
+            Ver quartos e fotos
+          </button>
+        </div>
+
+        <p class="hero-meta">
+          Cancelamento gratuito até 48h antes da chegada. Pagamento seguro no check-in.
+        </p>
+      </div>
+
+      <!-- GALERIA HERO (FOTOS SIMULADAS / EDITÁVEIS) -->
+      <div class="hero-gallery" aria-label="Galeria de fotos do hotel">
+        <div class="hero-gallery-main">
+          <!-- Imagem principal da galeria (simulada) -->
+          <!-- TROCAR URL da imagem: basta substituir o src abaixo -->
+          <img
+            id="hero-main-image"
+            src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Vista geral do quarto de hotel com cama de casal"
+          />
+          <div class="hero-gallery-tag">Fotos ilustrativas | clique nas miniaturas para trocar</div>
+        </div>
+        <div class="hero-gallery-grid">
+          <!-- Miniaturas: imagens simuladas e editáveis -->
+          <button class="gallery-thumb active" data-src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1200" aria-label="Quarto casal">
+            <img
+              src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=400"
+              alt="Quarto de hotel com cama de casal"
+            />
+          </button>
+          <button class="gallery-thumb" data-src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=1200" aria-label="Piscina ao ar livre">
+            <img
+              src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=400"
+              alt="Piscina ao ar livre em hotel"
+            />
+          </button>
+          <button class="gallery-thumb" data-src="https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  aria-label="Detalhes do quarto">
+            <img
+              src="https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=400"
+              alt="Detalhes do interior do quarto de hotel"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO QUARTOS / GALERIA -->
+    <section id="galeria" aria-label="Quartos e fotos do hotel">
+      <h2 class="section-title">Quartos aconchegantes para cada momento.</h2>
+      <p class="section-subtitle">
+        Escolha o tipo de acomodação ideal para sua viagem de lazer, férias em família ou visita a negócios.
+        Todas as fotos abaixo são ilustrativas e podem ser substituídas pelas fotos reais do seu hotel.
+      </p>
+
+      <div class="rooms-grid">
+        <!-- Card 1 -->
+        <article class="room-card">
+          <img
+            src="https://images.pexels.com/photos/2826787/pexels-photo-2826787.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Quarto standard com cama de casal"
+          />
+          <div class="room-body">
+            <h3 class="room-title">Quarto Standard</h3>
+            <p>Ideal para viagens rápidas, com cama de casal, ar-condicionado, TV e wi‑fi.</p>
+            <div class="room-meta">
+              <span>Até 2 hóspedes</span>
+              <span class="room-price">a partir de R$ 280/noite</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="room-card">
+          <img
+            src="https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Quarto luxo com varanda"
+          />
+          <div class="room-body">
+            <h3 class="room-title">Quarto Luxo Varanda</h3>
+            <p>Vista lateral para o mar, varanda privativa, cama queen, frigobar e cofre.</p>
+            <div class="room-meta">
+              <span>Até 3 hóspedes</span>
+              <span class="room-price">a partir de R$ 420/noite</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="room-card">
+          <img
+            src="https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Suíte família"
+          />
+          <div class="room-body">
+            <h3 class="room-title">Suíte Família</h3>
+            <p>Dois ambientes, sofá‑cama, ideal para famílias com crianças e estadias longas.</p>
+            <div class="room-meta">
+              <span>Até 4 hóspedes</span>
+              <span class="room-price">a partir de R$ 520/noite</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CHECK-IN ONLINE -->
+    <section id="checkin" aria-label="Check-in online">
+      <h2 class="section-title">Check-in online em poucos passos.</h2>
+      <p class="section-subtitle">
+        Antecipe seu check-in, economize tempo na chegada e aproveite o hotel desde o primeiro minuto.
+        Preencha os dados abaixo e confirme seu horário previsto de chegada.
+      </p>
+
+      <div class="card">
+        <form id="checkin-form" novalidate>
+          <div class="form-grid">
+            <div>
+              <label for="nome">Nome completo *</label>
+              <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Souza" required />
+            </div>
+            <div>
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required />
+            </div>
+            <div>
+              <label for="telefone">Telefone / WhatsApp *</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required />
+            </div>
+            <div>
+              <label for="checkin-data">Data de check-in *</label>
+              <input type="date" id="checkin-data" name="checkin-data" required />
+            </div>
+            <div>
+              <label for="checkout-data">Data de check-out *</label>
+              <input type="date" id="checkout-data" name="checkout-data" required />
+            </div>
+            <div>
+              <label for="hospedes">Número de hóspedes *</label>
+              <select id="hospedes" name="hospedes" required>
+                <option value="">Selecione...</option>
+                <option value="1">1 hóspede</option>
+                <option value="2">2 hóspedes</option>
+                <option value="3">3 hóspedes</option>
+                <option value="4">4 hóspedes</option>
+              </select>
+            </div>
+            <div>
+              <label for="tipo-quarto">Tipo de quarto</label>
+              <select id="tipo-quarto" name="tipo-quarto">
+                <option value="">Preferência...</option>
+                <option value="standard">Standard</option>
+                <option value="luxo">Luxo Varanda</option>
+                <option value="familia">Suíte Família</option>
+              </select>
+            </div>
+            <div>
+              <label for="horario-chegada">Horário previsto de chegada</label>
+              <input type="time" id="horario-chegada" name="horario-chegada" />
+            </div>
+          </div>
+
+          <div style="margin-top: 0.8rem;">
+            <label for="observacoes">Observações (opcional)</label>
+            <textarea
+              id="observacoes"
+              name="observacoes"
+              placeholder="Ex.: Preferência por andar alto, avisar em caso de restrição alimentar..."
+            ></textarea>
+          </div>
+
+          <div class="form-footer">
+            <div>
+              <input type="checkbox" id="aceite-lgpd" required />
+              <label for="aceite-lgpd">
+                Autorizo o uso dos meus dados para fins de reserva, conforme a LGPD.
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Confirmar check-in
+            </button>
+          </div>
+
+          <p id="checkin-status" class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" aria-label="Contato do hotel">
+      <h2 class="section-title">Fale com nossa equipe.</h2>
+      <p class="section-subtitle">
+        Tire suas dúvidas, consulte tarifas especiais para grupos ou eventos e obtenha suporte rápido.
+      </p>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <p><strong>Endereço:</strong> Av. Beira-Mar, 1234 – Centro, Cidade/UF</p>
+          <p><strong>Telefone:</strong> (11) 4000-1234</p>
+          <p><strong>WhatsApp:</strong> (11) 98888-1234</p>
+          <p><strong>E-mail:</strong> reservas@hotelparaiso.com</p>
+
+          <div class="contact-highlight">
+            <strong>Horário de atendimento:</strong><br />
+            Segunda a domingo, 24 horas para hóspedes. Central de reservas: 08h às 20h.
+          </div>
+
+          <ul class="contact-list">
+            <li>• Estacionamento privativo (sob disponibilidade)</li>
+            <li>• Pet friendly (mediante consulta)</li>
+            <li>• Tarifas especiais para empresas e eventos</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <form id="contato-form">
+            <div class="form-grid">
+              <div>
+                <label for="contato-nome">Nome *</label>
+                <input type="text" id="contato-nome" name="contato-nome" required />
+              </div>
+              <div>
+                <label for="contato-email">E-mail *</label>
+                <input type="email" id="contato-email" name="contato-email" required />
+              </div>
+              <div>
+                <label for="contato-assunto">Assunto *</label>
+                <select id="contato-assunto" name="contato-assunto" required>
+                  <option value="">Selecione...</option>
+                  <option value="reserva">Reserva</option>
+                  <option value="grupo">Grupo / Evento</option>
+                  <option value="parceria">Parcerias</option>
+                  <option value="outros">Outros</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-top: 0.8rem;">
+              <label for="contato-mensagem">Mensagem *</label>
+              <textarea id="contato-mensagem" name="contato-mensagem" required></textarea>
+            </div>
+
+            <div class="form-footer">
+              <span style="font-size: 0.78rem;">
+                Resposta em até 1 dia útil. Em casos urgentes, ligue diretamente para a recepção.
+              </span>
+              <button type="submit" class="btn btn-outline">
+                Enviar mensagem
+              </button>
+            </div>
+            <p id="contato-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="ano-rodape"></span> Hotel Paraíso — Todos os direitos reservados.</span>
+      <div class="footer-links">
+        <a href="#hero">Início</a>
+        <a href="#contato">Contato</a>
+        <a href="#checkin">Política de reservas</a>
+        <a href="#checkin">Política de privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
